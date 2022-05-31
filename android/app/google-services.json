@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "901128501009",
+    "project_id": "emp-management-685be",
+    "storage_bucket": "emp-management-685be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901128501009:android:fad6eb14cd0b66a929beb0",
+        "android_client_info": {
+          "package_name": "com.example.management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901128501009-g7t74douarjbaadbb0i0mfu02hutonqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxzjdRjKIQgDWiA_FQNq93a7cpNIAxfSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901128501009-g7t74douarjbaadbb0i0mfu02hutonqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
