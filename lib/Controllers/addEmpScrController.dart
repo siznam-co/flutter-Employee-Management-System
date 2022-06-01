@@ -17,8 +17,7 @@ class AddEmpScrController extends GetxController {
   //final ImagePicker _picker = ImagePicker();
   Country countrys;
   String radioButtonItem = 'ONE';
-  int id = 1;
-  int addEmpImg = 0;
+  var addEmpImg = 0.obs;
   String ids;
   Employee empDetail = Employee(
     empId: "",
@@ -31,7 +30,7 @@ class AddEmpScrController extends GetxController {
     address: "",
     details: "",
     imageUrl: "",
-  );
+  ).obs as Employee;
   FirebaseStorage storage = FirebaseStorage.instance;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   PickedFile pickedFile;
@@ -62,7 +61,7 @@ class AddEmpScrController extends GetxController {
     //setState(() {});
   }
 
-  Future<void> _upload() async {
+  upload() async {
     //final picker = ImagePicker();
     //XFile pickedImage;
     try {
@@ -92,4 +91,34 @@ class AddEmpScrController extends GetxController {
       }
     }
   }
+  /*Future<void> _upload() async {
+    //final picker = ImagePicker();
+    //XFile pickedImage;
+    try {
+      imageFile = imageFile1;
+
+      try {
+        await storage
+            .ref("Employee Pictures")
+            .child(ids = DateTime.now().millisecondsSinceEpoch.toString())
+            .putFile(
+              imageFile,
+              SettableMetadata(),
+            );
+        imagesUrl = await storage.ref(ids).getDownloadURL();
+        empDetail.imageUrl = imagesUrl;
+        print("Id for current Image $ids");
+        print("here Is Image Url ${empDetail.imageUrl}");
+        //setState(() {});
+      } on FirebaseException catch (error) {
+        if (kDebugMode) {
+          print(error);
+        }
+      }
+    } catch (err) {
+      if (kDebugMode) {
+        print(err);
+      }
+    }
+  }*/
 }
